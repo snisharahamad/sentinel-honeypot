@@ -17,12 +17,11 @@ The environment is entirely containerized using Docker Compose and segmented int
 
 * **Real-time Threat Monitoring:** Logs are instantly processed and visualized without manual parsing.
 * **Decoupled Architecture:** The logging layer (Loki/Promtail) is separated from the application layer (Cowrie), ensuring high performance and fault tolerance.
-* **Secure Administration:** The host's actual SSH service is moved to a non-standard port, leaving standard ports (22/23) completely exposed for Cowrie to capture botnet traffic.
 * **Infrastructure as Code (IaC):** The Grafana dashboard structure is exported as a portable `dashboard.json` file, allowing instant redeployment without pushing sensitive local databases.
 
 ## 🛠️ Deployment
 
-*Requirement: Docker and Docker Compose.*
+*Requirement: Docker and Docker Compose must be installed. Port 22 must be free and available on the host machine.*
 
 **1. Clone the repository**
 ```bash
